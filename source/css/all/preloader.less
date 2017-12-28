@@ -1,0 +1,70 @@
+.preloader {
+	width: 100px;
+	height: 100px;
+	animation: vizible  .3s;
+	// animation: rotate  3s infinite;
+
+	&__wrap {
+		position: fixed;
+		z-index: 10000;
+		background: rgba(255, 255, 255, 0.9);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		height: 100vh;
+		display: none;
+		&.active {
+			display: flex;
+		}
+		
+	}
+	
+	.donut-segment-1 {
+		animation: preloader  2s infinite, preloader2  2s infinite;
+	}
+	&__on {
+		cursor: pointer;
+		font-size: 20px;
+		padding: 20px;
+		border: 2px solid @red;
+		margin: 30px auto;
+		float: left;
+		&:hover {
+			color: @red;
+		}
+	}
+}
+
+
+@keyframes preloader {
+  from {
+    stroke-dasharray: 0 100;
+    
+  }
+  to {
+   stroke-dasharray: 100 0; 
+  }
+}
+
+@keyframes preloader2 {
+  from {
+    stroke-dashoffset: 125;
+  }
+  to {
+   
+    stroke-dashoffset: 25;
+  }
+}
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+   
+//     transform: rotate(360deg);
+//   }
+// }

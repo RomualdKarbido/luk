@@ -1,0 +1,68 @@
+@@include('./file-include/head.html')
+@@include('./file-include/header.html')
+
+
+
+
+<div style="width: 1200px; margin: 200px auto;">
+
+    <div style="width: 300px; float: left; margin-right: 30px;">
+        
+        @@include('./file-include/select.html')
+    </div>
+
+    <div style="width: 300px; float: left; margin-right: 30px;">
+       
+        @@include('./file-include/select.html')
+    </div>
+    <div style="width: 300px; float: left;">
+       
+        @@include('./file-include/select.html')
+    </div>
+    
+</div>
+<div style="clear: both;"></div>
+
+<div style="width: 1200px; margin: 20px auto;">
+
+	<div style="width: 300px; float: left; margin-right: 30px;">
+		
+		@@include('./file-include/m-select.html')
+	</div>
+
+	<div style="width: 300px; float: left; margin-right: 30px;">
+      
+        @@include('./file-include/m-select.html')
+    </div>
+    <div style="width: 300px; float: left;">
+		
+		@@include('./file-include/m-select.html')
+	</div>
+	
+</div>
+
+<div style="clear: both;"></div>
+<div style="width: 1200px; margin: 20px auto;">
+    <div class="preloader__on">Вызвать диавола</div>
+    @@include('./file-include/preloader.html')
+</div>
+
+
+@@include('./file-include/footer.html')
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".left-sidebar__box-name").click(function () {
+            $(this).parent('.left-sidebar__box').toggleClass("active");
+        });
+        $(".left-sidebar__item").click(function () {
+            $('.left-sidebar__item').removeClass('active');
+            $(this).addClass("active");
+        });
+        $(".right-sidebar__box-item-title").click(function () {
+            $(this).parent('.right-sidebar__box-item').toggleClass("active");
+        });
+    })
+</script>
+
+
