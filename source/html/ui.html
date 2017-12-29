@@ -1,5 +1,5 @@
 @@include('./file-include/head.html')
-@@include('./file-include/header.html')
+<!-- @@include('./file-include/header.html') -->
 
 
 
@@ -43,12 +43,21 @@
 
 <div style="clear: both;"></div>
 <div style="width: 1200px; margin: 20px auto;">
-    <div class="preloader__on">Вызвать диавола</div>
+    <div class="preloader__on">прелоадер</div>
     @@include('./file-include/preloader.html')
 </div>
 
 
-@@include('./file-include/footer.html')
+<div style="clear: both;"></div>
+<div style="width: 700px; margin: 20px auto;">
+    <textarea class="textarea" name="" id="" cols="30" rows="6" placeholder="Введите текст"></textarea>
+</div>
+
+<div style="width: 700px; margin: 20px auto;">
+    <input type="text" class="input">
+</div>
+
+<!-- @@include('./file-include/footer.html') -->
 
 <script type="text/javascript">
     $(document).ready(function () {

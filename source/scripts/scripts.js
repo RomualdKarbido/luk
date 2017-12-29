@@ -3,6 +3,23 @@ $(document).ready(function() {
 	$('.preloader__on').click(function() {
 		$('.preloader__wrap').addClass('active');
 	});
+	$('.preloader__wrap').click(function () {
+		$(this).addClass('closed');
+		setTimeout(function() {
+			$('.preloader__wrap').removeClass('closed active');
+		}, 500);
+
+
+		// $(this).removeClass('closed');
+		// $(this).removeClass('active');
+
+		// $(this).delay(10000).removeClass('closed');
+		// $(this).delay(10000).removeClass('active');
+		 // $(this).delay(5000).removeClass('closed');
+		// $(this).delay(8000).removeClass('active');
+		
+		
+	});
 
 
 	//селект

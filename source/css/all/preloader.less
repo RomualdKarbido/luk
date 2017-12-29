@@ -19,13 +19,19 @@
 		display: none;
 		&.active {
 			display: flex;
+			animation: preloader-backdor 1s;
+		}
+		&.active.closed {
+			animation: preloader-backdor-close 1s;
+			
 		}
 		
 	}
 	
 	.donut-segment-1 {
-		animation: preloader  2s infinite, preloader2  2s infinite;
+		animation: preloader linear 3s infinite, preloader2 linear 3s  infinite;
 	}
+	
 	&__on {
 		cursor: pointer;
 		font-size: 20px;
@@ -45,6 +51,7 @@
     stroke-dasharray: 0 100;
     
   }
+  
   to {
    stroke-dasharray: 100 0; 
   }
@@ -52,13 +59,32 @@
 
 @keyframes preloader2 {
   from {
-    stroke-dashoffset: 125;
+    stroke-dashoffset: 225;
   }
   to {
    
     stroke-dashoffset: 25;
   }
 }
+@keyframes preloader-backdor {
+	from {
+    	opacity: 0;
+  	}
+  
+  	to {
+   		opacity: 1;
+  	}
+}
+@keyframes preloader-backdor-close {
+	from {
+    	opacity: 1;
+  	}
+  
+  	to {
+   		opacity: 0; 
+  	}
+}
+
 // @keyframes rotate {
 //   from {
 //     transform: rotate(0deg);
