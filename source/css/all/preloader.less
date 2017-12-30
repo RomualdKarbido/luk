@@ -2,7 +2,7 @@
 	width: 100px;
 	height: 100px;
 	animation: vizible  .3s;
-	// animation: rotate  3s infinite;
+	// animation: rotate  6s infinite linear;
 
 	&__wrap {
 		position: fixed;
@@ -23,14 +23,14 @@
 		}
 		&.active.closed {
 			animation: preloader-backdor-close 1s;
-			
 		}
 		
 	}
 	
 	.donut-segment-1 {
-		animation: preloader linear 3s infinite, preloader2 linear 3s  infinite;
+		animation: preloader linear 3s infinite;
 	}
+	
 	
 	&__on {
 		cursor: pointer;
@@ -49,23 +49,15 @@
 @keyframes preloader {
   from {
     stroke-dasharray: 0 100;
-    
+    stroke-dashoffset: 225;
   }
   
   to {
    stroke-dasharray: 100 0; 
+   stroke-dashoffset: 25;
   }
 }
 
-@keyframes preloader2 {
-  from {
-    stroke-dashoffset: 225;
-  }
-  to {
-   
-    stroke-dashoffset: 25;
-  }
-}
 @keyframes preloader-backdor {
 	from {
     	opacity: 0;
