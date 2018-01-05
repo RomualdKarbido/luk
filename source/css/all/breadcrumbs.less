@@ -34,6 +34,22 @@
 				display: none;
 			}
 		}
-
+		&_red {
+			color: @red;
+			font-style: normal;
+			&:first-child {
+				padding-left: 0;
+				&:before {
+					background: none;
+				}
+			}
+			&:last-child {
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
+	}
+	&_red {
+		margin-top: 20px;
 	}
 }

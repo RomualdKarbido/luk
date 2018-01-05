@@ -74,9 +74,18 @@ $(document).ready(function() {
 	});
 	
 
+	//бутерброд
 
+	$('.sandwich__table_head').click(function() {
+		// $('.sandwich__item').removeClass('active');
+		$(this).closest('.sandwich__item').toggleClass('active');
+	});
 	
 
+
+	$('.my-product__title').click(function() {
+		$(this).closest('.my-product').toggleClass('active');
+	});
 });
 
 	
