@@ -86,6 +86,20 @@ $(document).ready(function() {
 	$('.my-product__title').click(function() {
 		$(this).closest('.my-product').toggleClass('active');
 	});
+
+
+	// календарь
+	$( function() {
+		$( "#datepicker" ).datepicker({
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			range: "period",
+			onSelect: function(dateText, inst, exstRange) {
+				$("#datepicker").val(exstRange.startDateText + "-" + exstRange.endDateText);
+			}
+		});
+	});
+	
 });
 
 	
