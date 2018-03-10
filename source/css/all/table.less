@@ -1,0 +1,82 @@
+table {
+	&.table {
+		width: 100%;
+		tr {
+			height: 32px;
+			&.table__tr-active {
+				td {
+					color: @red;
+					i {
+						color: @red;
+					}
+				}
+			}
+		}
+		td {
+			position: relative;
+		}
+		.table {
+			&__cbox {
+				width: 40px;
+				box-sizing: border-box;
+				position: relative;
+				padding: 0 10px;
+				
+				.cbox {
+					padding: 0;
+					margin: 0;
+					width: 20px;
+					height: 20px;
+
+					&__label {
+						padding: 0;
+						margin: 0;
+						
+					}
+
+				}
+				.cbox + label {
+					padding-left: 20px;
+					&:before {
+						width: 20px;
+						height: 20px;
+						top: -2px;
+					}
+				}
+				.cbox:checked + label:after {
+					font-size: 16px;
+					left: 4px;
+				}
+
+			}
+			&__down {
+				position: absolute;
+				right: 10px;
+				top: 5px;
+				width: 20px;
+				height: 20px;
+				i {
+					font-size: 20px;
+					color: @blue;
+				}
+				&-padding {
+					padding-right: 40px;
+				}
+			}
+			&__center {
+				text-align: center;
+			}
+		}
+	}
+}
+.table {
+	&__scroll {
+		width: 100%;
+		overflow: auto;
+		max-height: 227px;
+		margin-bottom: @sp*2;
+	}
+	&__persent {
+		width: 100px;
+	}
+}
